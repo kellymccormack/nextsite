@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "buildstart": "npm run build && npx next start -p 400"
   },
   "dependencies": {
     "react": "^18",
