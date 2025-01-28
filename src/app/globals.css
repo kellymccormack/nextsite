@@ -105,3 +105,21 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+/* NEW STYLES */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: sticky;
+  border-bottom: solid 1px #fff;
+}
+
+/* main {
+} */
