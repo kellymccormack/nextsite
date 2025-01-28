@@ -1,41 +1,12 @@
-"use client";
-
 import styles from "./page.module.css";
-// import { useRouter } from "next/router";
-// newer:
-// import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-
 
 export default function Home() {
-  // const router = useRouter()
-  // const handleTeamPageClick = (e, team) => {
-  //   e.preventDefault()
-  //   router.push(`/${team}`)
-  // }
-  // const handleContactclick = (e) => {
-  //   e.preventDefault();
-  //   router.push('/contact');
-  // }
-  // const handleHomePageClick = (e, team) => {
-  //     e.preventDefault()
-  //     router.push(`/`)
-  //   }
-
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <p>
-
-          {/* TESTING BASIC LINK TO NEW CONTACT PAGE  */}
-          <Link href="/contact">Contact Link</Link>
-
-          {/* <button onClick={handleContactclick}>contact onClick</button> */}
-
         </p>
         <div>
           <a
