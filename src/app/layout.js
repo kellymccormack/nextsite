@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
+import Script from "next/script";
 
 
 import Link from 'next/link';
@@ -36,6 +37,23 @@ export default function RootLayout({ children }) {
           &copy;2025 KellyMcCormack.com
           <Link href="/privacy-accessibility-statement">Privacy and Accessibility Statement</Link>
         </footer>
+
+        {/* <Script src="/next/temp-paths.js"></Script> */}
+        <Script>
+          {`
+            if (window.location.href.indexOf('https://kellymccormack.com/next') == 0 )  {
+              // const styleSheets = document.styleSheets;
+              // let head = document.getElementsByTagName('head')[0];
+              // for (let i = 0; i < styleSheets.length; i++) {
+              //     let link = document.createElement('link');
+              //     link.rel = 'stylesheet';
+              //     link.type = 'text/css';
+              //     link.href = `./${styleSheets[i].href.split('/').pop()}`;
+              //     head.appendChild(link);
+              // }
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
