@@ -2,16 +2,18 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
 import Script from "next/script";
-
-
 import Link from 'next/link';
 
+import Navigation from "./components/navigation";
+import Logo from "./components/logo";
+
+export const siteName = "KellyMcCormack.com";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "KellyMcCormack.com",
-  description: "Web developer, designer, accessibility specialist, creative technonlogist.",
+  description: "Web developer, designer, accessibility specialist, creative technologist.",
 };
 
 export default function RootLayout({ children }) {
@@ -19,15 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <header className="header">
-          KellyMcCormack.com
+          <Link href="/">
+            <Logo></Logo>
+          </Link>
           <nav className={styles.navMain}>
-            <Link href="/">Home</Link>
-            <Link href="/accessibility">Accessibility</Link>
-            <Link href="/development">Development</Link>
-            <Link href="/creative-technology">Creative Technology</Link>
-            <Link href="/bio">Bio</Link>
-            <Link href="/portfolio">Portfolio</Link>
-            <Link href="/contact">Contact</Link>
+            <Navigation></Navigation>         
           </nav>
         </header>
 

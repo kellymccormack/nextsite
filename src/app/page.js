@@ -9,7 +9,8 @@ import Link from 'next/link';
 export default function Home() {
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} style={{background: '#800080'}}>
+      <h1>Welcome</h1>
       {/* <div className={styles.description}>
         <div>
          
