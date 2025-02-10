@@ -7,7 +7,7 @@ export const metadata = {
     description: "Web developer, designer, accessibility specialist, creative technologist.",
 };
 
-export default function Page() {
+export default function Page(props) {
     return  <main className={styles.main} style={{background: '#3f5a36'}}>
         <h1>Contact </h1>
     </main>

@@ -2,7 +2,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
 import Script from "next/script";
+import Providers from "./providers.js";
 import Link from 'next/link';
+// import { Link } from "next-transition-router";
+
 
 import Navigation from "./components/navigation";
 import Logo from "./components/logo";
@@ -20,21 +23,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="header">
-          <Link href="/">
-            <Logo></Logo>
-          </Link>
-          <nav className={styles.navMain}>
-            <Navigation></Navigation>         
-          </nav>
-        </header>
+        <Providers>
+          <header className="site-header">
+            <Link href="/" className={styles.headerLogo}>
+              <Logo
+                site={siteName}
+              ></Logo>
+            </Link>
+            <nav className={styles.navMain}>
+              <Navigation></Navigation>         
+            </nav>
+          </header>
 
-          {children}
+            {children}
 
-        <footer>
-          &copy;2025 KellyMcCormack.com
-          <Link href="/privacy-accessibility-statement">Privacy and Accessibility Statement</Link>
-        </footer>
+          <footer className="site-footer">
+            &copy;2025 KellyMcCormack.com
+            <Link href="/privacy-accessibility-statement">Privacy and Accessibility Statement</Link>
+          </footer>
+        </Providers>
+
 
         {/* <Script src="/next/temp-paths.js"></Script> */}
         <Script>

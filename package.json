@@ -11,7 +11,9 @@
     "buildstart": "npm run build && npx next start -p 400"
   },
   "dependencies": {
+    "gsap": "^3.12.7",
     "next": "14.2.5",
+    "next-transition-router": "^0.2.7",
     "react": "^18",
     "react-dom": "^18",
     "serve": "^14.2.4"
