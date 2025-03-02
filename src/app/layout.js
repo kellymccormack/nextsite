@@ -1,3 +1,5 @@
+"use client";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
@@ -14,10 +16,10 @@ export const siteName = "KellyMcCormack.com";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "KellyMcCormack.com",
-  description: "Web developer, designer, accessibility specialist, creative technologist.",
-};
+// export const metadata = {
+//   title: "KellyMcCormack.com",
+//   description: "Web developer, designer, accessibility specialist, creative technologist.",
+// };
 
 export default function RootLayout({ children }) {
   return (

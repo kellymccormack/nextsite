@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 // HOME PAGE
 
 import styles from "./page.module.css";
@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 // import Link from 'next/link';
 
 
-export default function Home() {
+export default function Page() {
 
   return (
     <main className={styles.main} style={{background: '#522081'}}>
@@ -25,5 +25,5 @@ export default function Home() {
         
       </div> */}
     </main>
-  );
+  )
 }
