@@ -4,13 +4,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
 import Script from "next/script";
-import Providers from "./providers.js";
+import Providers from "./providers.jsx";
 import Link from 'next/link';
 // import { Link } from "next-transition-router";
 
 
 import Navigation from "./components/navigation";
-import Logo from "./components/logo";
+import Logo from "./components/logo.jsx";
 
 export const siteName = "KellyMcCormack.com";
 
@@ -25,7 +25,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
           <header className="site-header">
             <Link href="/" className={styles.headerLogo}>
               <Logo
@@ -36,15 +35,13 @@ export default function RootLayout({ children }) {
               <Navigation></Navigation>         
             </nav>
           </header>
-
+          <Providers>
             {children}
-
+          </Providers>
           <footer className="site-footer">
             &copy;2025 KellyMcCormack.com
             <Link href="/privacy-accessibility-statement">Privacy and Accessibility Statement</Link>
           </footer>
-        </Providers>
-
 
         {/* <Script src="/next/temp-paths.js"></Script> */}
         <Script>
